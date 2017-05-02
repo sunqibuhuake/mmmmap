@@ -1,0 +1,179 @@
+html,body {
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+@keyframes animationBG {
+    from { background-position: 0 50%; }
+    to { background-position: 100% 50%; }
+}
+@-webkit-keyframes animationBG {
+    from { background-position: 0 50%; }
+    to { background-position: 100% 50%; }
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: black;
+    /*background: url('../map/bg3.jpg');*/
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+    overflow: hidden;
+}
+
+.anima {
+    animation: animationBG 60s linear alternate infinite;
+}
+
+.wrapper {
+    position: absolute;
+    top:16%;
+    width: 100%;
+    left: 0%;
+    height: 30px;
+    transform: scale3d(1,27,1);
+    transform-origin: top;
+    -webkit-transform: scale3d(1,27,1);
+    -webkit-transform-origin: top
+}
+
+.circleBtn{
+    width: 10px;
+    height: 100%;
+}
+.normalBtn {
+    width: 34px;
+    height:100%;
+}
+.menuBtn {
+    position: absolute;
+    left: 120px;
+    top:0;
+}
+.shareBtn {
+    position: absolute;
+    left: calc(27%);
+    top:0;
+}
+.listBtn {
+    position: absolute;
+    left: calc(27% + 40px);
+    top:0;
+}
+.newBtn {
+    position: absolute;
+    left: calc(27% + 80px);
+    top:0;
+}
+.downloadBtn {
+    position: absolute;
+    left: calc(67% + 130px);
+    top:0;
+}
+.addressBtn {
+    position: absolute;
+    left: calc(27% + 120px);
+    top:0;
+    height: 100%;
+    width: 40%;
+}
+
+.address_input {
+    width: 80%;
+    height: 70%;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    font-size:26px;
+    color: gray;
+    border-width:0;
+    border-color:white;
+    border-style:none;
+}
+.address_input:focus {
+    outline:none;
+    background: transparent;
+}
+
+.addBtn {
+    position: absolute;
+    right: 4px;
+    bottom: 0px;
+    height: 30%;
+    width: 20px;
+}
+
+.midBtn{
+    width: 24px;
+    height:100%;
+}
+
+.leftBtn {
+    position: absolute;
+    left: 60px;
+    top:0;
+}
+.rightBtn {
+    position: absolute;
+    left: 84px;
+    top:0;
+}
+
+.img {
+    width: 100%;
+    height:100%;
+}
+
+
+.closeBtn {
+    position: absolute;
+    left: 8px;
+    top:0;
+}
+
+.zoomInBtn {
+    position: absolute;
+    left: 26px;
+    top:0;
+}
+.zoomOutBtn {
+    position: absolute;
+    left: 44px;
+    top:0;
+}
+
+#viewer {
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+.green-layer {
+    background: #38CC41;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.switchBtn {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

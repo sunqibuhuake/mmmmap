@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link href="./custom.css" rel="stylesheet">
+</head>
+<body onload="load()">
+<div class="container" id="">
+    <div id="viewer">
+    </div>
+    <div class="wrapper">
+        <div class="circleBtn closeBtn">
+            <img src="./close.png" class="img"/>
+        </div>
+        <div class="circleBtn zoomInBtn">
+            <img src="./sscale.png" class="img"/>
+        </div>
+        <div class="circleBtn zoomOutBtn">
+            <img src="./bscale.png" class="img"/>
+        </div>
+
+        <div class="midBtn leftBtn">
+            <img src="./left.png" class="img"/>
+        </div>
+        <div class="midBtn rightBtn">
+            <img src="./right.png" class="img"/>
+        </div>
+
+        <div class="normalBtn menuBtn">
+            <img src="./menu.png" class="img"/>
+        </div>
+
+        <div class="normalBtn shareBtn">
+            <img src="./share.png" class="img"/>
+        </div>
+        <div class="normalBtn listBtn">
+            <img src="./list.png" class="img"/>
+        </div>
+        <div class="normalBtn newBtn">
+            <img src="./new.png" class="img"/>
+        </div>
+
+        <div class="normalBtn addressBtn">
+            <img src="./address.png" class="img"/>
+            <input class="address_input"/>
+        </div>
+
+        <div class="normalBtn downloadBtn">
+            <img src="./download.png" class="img"/>
+        </div>
+
+        <div class="addBtn">
+            <img src="./add.png" style="height: 100%;"/>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="green-layer">
+</div>
+
+<script src="./jq.js"></script>
+<script src="./three.js"></script>
+<script src="./TweenLite.js"></script>
+<script src="./main2.js"></script>
+<script type="text/javascript">
+    var zoomLevel = 0;
+    $(function () {
+        $('.listBtn').click(function () {
+            $('.address_input').val('Wenzhou Buenos Aires Jaipur');
+        })
+
+        $('.downloadBtn').click(function () {
+            window.location.href = 'http://on7tgdgw1.bkt.clouddn.com/webpage.zip';
+        })
+
+        $('.shareBtn').click(function () {
+            window.open('./new.html');
+        })
+
+        $('.rightBtn').click(function () {
+            zoomLevel--;
+            if (zoomLevel < -5) {
+                zoomLevel = -5;
+            }
+            zoom(zoomLevel)
+        })
+
+        $('.leftBtn').click(function () {
+            zoomLevel++
+            if (zoomLevel > 5) {
+                zoomLevel = 5;
+            }
+            zoom(zoomLevel)
+        })
+
+        $('.zoomOutBtn').click(function () {
+            $('.green-layer').fadeIn(300)
+        })
+
+        $('.green-layer').click(function () {
+            $('.green-layer').fadeOut(300)
+        })
+
+
+        document.onkeydown=function(event){
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if(e && e.keyCode==13){ // enter 键
+                //要做的事情
+                console.log('enter')
+                e.preventDefault();
+                var address = $('.address_input').val().trim();
+                if (address) {
+                    queryLocation(address)
+                }
+
+            }
+        };
+
+    })
+    function load() {
+        console.log('load finished');
+    }
+</script>
+</body>
+</html>

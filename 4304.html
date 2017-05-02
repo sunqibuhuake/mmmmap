@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link href="./custom430.css" rel="stylesheet">
+</head>
+<body onload="load()">
+<div class="container" id="">
+    <div id="viewer">
+    </div>
+    <div class="wrapper">
+        <div class="circleBtn closeBtn">
+            <img src="./close.png" class="img" />
+        </div>
+        <div class="circleBtn zoomInBtn">
+            <img src="./sscale.png" class="img" />
+        </div>
+        <div class="circleBtn zoomOutBtn">
+            <img src="./bscale.png" class="img" />
+        </div>
+
+        <div class="midBtn leftBtn">
+            <img src="./left.png" class="img" />
+        </div>
+        <div class="midBtn rightBtn">
+            <img src="./right.png" class="img" />
+        </div>
+
+        <div class="normalBtn menuBtn switchswitch">
+            <img src="./menu.png" class="img" />
+        </div>
+
+        <div class="normalBtn shareBtn">
+            <img src="./share.png" class="img" />
+        </div>
+        <div class="normalBtn listBtn">
+            <img src="./list.png" class="img" />
+        </div>
+        <div class="normalBtn newBtn">
+            <img src="./new.png" class="img" />
+        </div>
+
+        <div class="normalBtn addressBtn">
+            <img src="./address.png" class="img" />
+            <input class="address_input"/>
+            <div class="switchBtn">
+
+            </div>
+        </div>
+
+        <div class="normalBtn downloadBtn">
+            <img src="./download.png" class="img" />
+        </div>
+    </div>
+
+
+    <div class="addBtn">
+        <img src="./add2.png" style="height: 100%;width: 100%;" />
+    </div>
+</div>
+
+<img id="smallmap" src="./text-map-small.png" style="position: absolute;
+    width: 38%;
+    top: 34%;
+    left: 33.3%;
+    display: none;">
+
+<div class="green-layer">
+</div>
+<div class="mini" style="position: absolute;top: 0;left: 0;width: 100%;background: white;height: 100%;display: none;">
+    <img style="position: absolute;width: 10%; bottom: 5%;right: 5%;" src="./image-map-small.png">
+</div>
+
+<script src="./jq.js"></script>
+<script src="./three.js"></script>
+<script src="./TweenLite.js"></script>
+<script src="./text4304.js"></script>
+<script type="text/javascript">
+
+    function load() {
+        console.log('load finished');
+    }
+</script>
+</body>
+</html>
